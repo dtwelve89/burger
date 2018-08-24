@@ -1,19 +1,28 @@
-li {
+/* li {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
-}
+} */
 
+h1 {
+    text-align: center;
+}
 .label {
     font-weight: bold;
 }
 
-.create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-}
-
 .form-group {
     margin-bottom: 5px;
-}  
+}
+
+#burg-img {
+    float:left;
+}
+
+#uneaten-burg {
+    float: left;
+}
+
+#devoured-burg {
+    float: left;
+}

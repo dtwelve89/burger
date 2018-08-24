@@ -1,38 +1,28 @@
-<h1>Burgers!</h1>
+<h1>Eat-Da-Burger!</h1>
 
-<h2>Burgers that are not devoured!</h2>
-
-<ul>
+<ol type="1" id="uneaten-burg">
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
+</ol>
+<img src="{{public/assets/img/BlueBurger.jpg}}" alt="blue-burger">
+<img src="{{assets/img/BlueBurger.jpg}}" alt="blue-burger"> 
+<img src="{{img/BlueBurger.jpg}}" alt="blue-burger"> 
+<img src="{{BlueBurger.jpg}}" alt="blue-burger"> 
+<ol type="1" id="devoured-burg">
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      <li>
+        {{burger_name}}
+      </li>
     {{/if}}
   {{/each}}
-</ul>
+</ol>
 
-<h2>Add a Burger</h2>
 <form class="create-form">
-
-  <div class="form-group">
-    <label for="bur">Burger Name:</label>
-    <input type="text" id="bur" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="dev">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured
-  </div>
-
-  <button type="submit">Add Burger</button>
+  <textarea id="contact-message" name="burger_name"></textarea>
+  <button type="submit">Submit</button>
+  <p>Enter a burger you want to eat Click the "Submit" button</p>
 </form>

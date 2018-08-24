@@ -50,7 +50,7 @@ var orm = {
   },
 
 // Insert One ORM Function
-  insertOne: function(table, cols, vals, callbacl) {
+  insertOne: function(table, cols, vals, callback) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
