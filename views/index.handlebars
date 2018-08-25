@@ -1,28 +1,36 @@
 <h1>Eat-Da-Burger!</h1>
 
-<ol type="1" id="uneaten-burg">
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ol>
-<img src="{{public/assets/img/BlueBurger.jpg}}" alt="blue-burger">
-<img src="{{assets/img/BlueBurger.jpg}}" alt="blue-burger"> 
-<img src="{{img/BlueBurger.jpg}}" alt="blue-burger"> 
-<img src="{{BlueBurger.jpg}}" alt="blue-burger"> 
-<ol type="1" id="devoured-burg">
-  {{#each burgers}}
-    {{#if devoured}}
-      <li>
-        {{burger_name}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ol>
+<div class="container">
+  <figure class="box">
+    <ol type="1" id="uneaten-burg">
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+      {{/each}}
+    </ol>
+  </figure> 
+  <img src="assets/img/BlueBurger.png" id="burger-img" alt="blue-burger">
+  <figure class="box">
+    <ol type="1" id="devoured-burg">
+      {{#each burgers}}
+        {{#if devoured}}
+          <li>
+            {{burger_name}}
+          </li>
+          {{!-- {{> burgers/burger-block devoured=false}} --}}
+        {{/if}}
+      {{/each}}
+    </ol>
+  </figure>
+</div>
 
 <form class="create-form">
-  <textarea id="contact-message" name="burger_name"></textarea>
-  <button type="submit">Submit</button>
-  <p>Enter a burger you want to eat Click the "Submit" button</p>
+  <textarea id="bur" name="burger_name"></textarea>
+  <button type="submit" id="submit-button">Submit</button>
+  <p>Enter a burger you want to eat and then click the "Submit" button</p>
 </form>
+
+<footer class="main-footer">
+  <p>Copyright &copy; 2018, Danny Nguyen</p>
+</footer>

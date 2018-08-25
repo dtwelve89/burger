@@ -1,28 +1,58 @@
-/* li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-} */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color:#bbe7fd;
+    font: normal 16px/1.6em 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
 
 h1 {
     text-align: center;
-}
-.label {
-    font-weight: bold;
+    margin-top: 40px;
 }
 
-.form-group {
-    margin-bottom: 5px;
+form textarea {
+    height:100px;
+    width:25%;
+} 
+
+ol {
+    margin-top: 100px;
 }
 
-#burg-img {
+.box { 
+    height:300px;
+    width:260px;
+    float:left;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+    overflow: auto;
+    flex: 1 0 auto;
+}
+
+.create-form {
+    text-align: center
+}
+
+.main-footer {
+    color:white;
+    font-size: x-small;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+#burger-img {
     float:left;
 }
 
 #uneaten-burg {
-    float: left;
-}
-
-#devoured-burg {
-    float: left;
+    color: #905804;
 }
